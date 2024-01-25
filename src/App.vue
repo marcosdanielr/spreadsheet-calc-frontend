@@ -29,7 +29,7 @@ watch(file, (newFile) => {
     setTimeout(() => {
       errorMessage.value = ""
       file.value = null
-    }, 3000)
+    }, 2000)
     return
   }
 
@@ -38,8 +38,7 @@ watch(file, (newFile) => {
 
   uploadCSVService(newFile!)
     .then((response) => {
-      const { average_billing_quantity, total_amount, total_subscribers } =
-        response
+      const { total_subscribers } = response
 
       data.value = [total_subscribers]
     })
