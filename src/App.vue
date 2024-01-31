@@ -25,7 +25,7 @@ watch(file, (newFile) => {
   const MAX_FILE_SIZE = 5 * 1000000
 
   if (newFile!.size! > MAX_FILE_SIZE) {
-    errorMessage.value = "Max file size is 10mb!"
+    errorMessage.value = "Max file size is 5mb!"
     setTimeout(() => {
       errorMessage.value = ""
       file.value = null
